@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Rainbow Rose Connect</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,103 +18,47 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
-font-family:'Poppins', sans-serif;
-background:
-linear-gradient(to bottom,#fff8f5,#f8eef6,#f6efe7);
-color:#40342f;
+font-family:'Poppins',sans-serif;
+background:#fff8f4;
+color:#3e3431;
 overflow-x:hidden;
-position:relative;
 }
 
-/* DREAMY BACKGROUND GLOWS */
-
-body::before{
-content:'';
-position:fixed;
-width:700px;
-height:700px;
-background:radial-gradient(circle,#ffd9ef 0%, transparent 70%);
-top:-250px;
-left:-150px;
-opacity:0.6;
-z-index:-1;
-}
-
-body::after{
-content:'';
-position:fixed;
-width:600px;
-height:600px;
-background:radial-gradient(circle,#ffe9b8 0%, transparent 70%);
-bottom:-250px;
-right:-180px;
-opacity:0.5;
-z-index:-1;
-}
-
-/* NAVIGATION */
+/* NAV */
 
 nav{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-padding:24px 8%;
+padding:20px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:rgba(255,248,245,0.58);
-backdrop-filter:blur(18px);
-
-border-bottom:1px solid rgba(255,255,255,0.3);
+background:rgba(255,248,244,0.86);
+backdrop-filter:blur(12px);
 
 z-index:999;
 }
 
 .logo{
-font-family:'Cormorant Garamond', serif;
-font-size:2.2rem;
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+color:#d35f87;
 font-weight:600;
-
-background:linear-gradient(to right,#d95d87,#ff9b6a,#d95d87);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
 }
 
 nav ul{
 display:flex;
-gap:30px;
+gap:28px;
 list-style:none;
 }
 
 nav a{
 text-decoration:none;
-color:#6a5d58;
+color:#6b5b57;
 font-size:0.95rem;
-transition:0.3s;
-position:relative;
-}
-
-nav a::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-5px;
-width:0%;
-height:2px;
-background:#d95d87;
-transition:0.3s;
-}
-
-nav a:hover::after{
-width:100%;
 }
 
 /* HERO */
@@ -123,177 +66,158 @@ width:100%;
 .hero{
 min-height:100vh;
 
+padding:160px 7% 100px;
+
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:50px;
+align-items:center;
+
 background:
-linear-gradient(rgba(255,248,245,0.58), rgba(255,248,245,0.82)),
+linear-gradient(rgba(255,248,244,0.7),rgba(255,248,244,0.8)),
 url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1600&auto=format&fit=crop');
 
 background-size:cover;
 background-position:center;
 
-display:flex;
-align-items:center;
-
-padding:140px 8% 100px;
-
 position:relative;
 overflow:hidden;
 }
 
-/* FLOATING SHAPES */
-
 .hero::before{
 content:'';
 position:absolute;
-
-width:450px;
-height:450px;
-
-background:
-linear-gradient(to right,#ffd7ee,#fff1bb);
-
-border-radius:55% 45% 70% 30% / 41% 53% 47% 59%;
-
-top:90px;
-right:-120px;
-
-opacity:0.45;
-filter:blur(10px);
+width:500px;
+height:500px;
+background:#ffd8e8;
+border-radius:50%;
+top:-200px;
+right:-150px;
+opacity:0.5;
+filter:blur(20px);
 }
 
-.hero::after{
-content:'✿';
-
-position:absolute;
-bottom:60px;
-right:120px;
-
-font-size:9rem;
-color:rgba(217,93,135,0.12);
-
-transform:rotate(-10deg);
-}
-
-.hero-content{
-max-width:760px;
+.hero-text{
 position:relative;
 z-index:2;
 }
 
-.small-text{
+.small{
 letter-spacing:4px;
-text-transform:uppercase;
-font-size:0.8rem;
-
-color:#d98a56;
-
-margin-bottom:22px;
+font-size:0.75rem;
+color:#d38a63;
+margin-bottom:18px;
 }
 
 .hero h1{
-font-family:'Cormorant Garamond', serif;
-
-font-size:6.5rem;
-line-height:0.92;
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+line-height:1;
 font-weight:500;
-
-margin-bottom:35px;
-
-color:#2e2623;
+margin-bottom:30px;
+color:#2f2624;
 }
 
-.highlight{
+.hero h1 span{
+color:#e38eb2;
 font-style:italic;
-
-background:linear-gradient(to right,#d95d87,#ff9c76);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
 }
 
 .hero p{
-font-size:1.08rem;
-line-height:2.1;
-color:#5d534f;
-
-margin-bottom:45px;
-max-width:680px;
+line-height:2;
+font-size:1rem;
+max-width:580px;
+color:#5f5551;
+margin-bottom:35px;
 }
-
-/* BUTTON */
 
 .button{
 display:inline-block;
-
-padding:17px 34px;
-
+padding:16px 34px;
 border-radius:100px;
 
 background:
-linear-gradient(to right,#d95d87,#ffb16c);
+linear-gradient(to right,#e58aad,#f4b266);
 
 color:white;
 text-decoration:none;
 
+font-size:0.95rem;
+
 box-shadow:
-0 10px 30px rgba(217,93,135,0.25);
-
-transition:0.3s;
+0 10px 25px rgba(229,138,173,0.25);
 }
 
-.button:hover{
-transform:translateY(-4px) scale(1.03);
+/* HERO IMAGES */
+
+.hero-images{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+position:relative;
+z-index:2;
 }
 
-/* SECTION */
+.hero-images img{
+width:100%;
+height:260px;
+object-fit:cover;
+
+border-radius:30px;
+
+box-shadow:
+0 15px 30px rgba(0,0,0,0.08);
+
+transition:0.4s;
+}
+
+.hero-images img:hover{
+transform:translateY(-6px);
+}
+
+.tall{
+height:540px !important;
+}
+
+/* ABOUT */
 
 .section{
-padding:130px 8%;
+padding:120px 7%;
 position:relative;
 }
 
 .section-title{
-font-family:'Cormorant Garamond', serif;
-font-size:4.5rem;
-margin-bottom:35px;
-
-color:#2f2623;
+font-family:'Cormorant Garamond',serif;
+font-size:3.8rem;
+margin-bottom:25px;
+color:#2f2624;
 }
 
 .section-text{
 max-width:850px;
-
-line-height:2.1;
-font-size:1.08rem;
-
-color:#5f5652;
+line-height:2;
+color:#5f5551;
+font-size:1rem;
 }
 
-/* GLASS CARDS */
+/* CARDS */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
-
-margin-top:65px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:28px;
+margin-top:60px;
 }
 
 .card{
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(12px);
 
-background:rgba(255,255,255,0.45);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,0.35);
-
-padding:45px;
-
-border-radius:35px;
+padding:40px;
+border-radius:30px;
 
 box-shadow:
-0 15px 40px rgba(0,0,0,0.06);
-
-transition:0.4s;
+0 10px 25px rgba(0,0,0,0.05);
 
 position:relative;
 overflow:hidden;
@@ -301,192 +225,135 @@ overflow:hidden;
 
 .card::before{
 content:'';
-
 position:absolute;
-width:200px;
-height:200px;
-
-background:
-radial-gradient(circle,#ffd9ef 0%, transparent 70%);
-
-top:-80px;
-right:-70px;
-}
-
-.card:hover{
-transform:translateY(-10px);
+width:160px;
+height:160px;
+background:#ffe6ef;
+border-radius:50%;
+top:-70px;
+right:-60px;
 }
 
 .card h3{
-font-family:'Cormorant Garamond', serif;
-font-size:2.2rem;
-
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
 margin-bottom:18px;
-
-color:#cf5c82;
-}
-
-.card p{
-line-height:1.95;
-color:#5f5651;
+color:#d15d86;
 position:relative;
 z-index:2;
 }
 
-/* GALLERY */
+.card p{
+line-height:1.9;
+color:#5f5551;
+position:relative;
+z-index:2;
+}
+
+/* COMMUNITY GALLERY */
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:28px;
-margin-top:65px;
+gap:22px;
+margin-top:60px;
 }
 
 .gallery img{
 width:100%;
-height:460px;
+height:360px;
 object-fit:cover;
 
 border-radius:35px;
 
 box-shadow:
-0 20px 40px rgba(0,0,0,0.08);
+0 18px 30px rgba(0,0,0,0.08);
 
 transition:0.4s;
 }
 
 .gallery img:hover{
-transform:translateY(-8px) scale(1.02);
+transform:translateY(-8px);
 }
 
-/* QUOTE SECTION */
+/* QUOTE */
 
 .quote-section{
-
-padding:160px 8%;
+padding:140px 7%;
 
 background:
-linear-gradient(rgba(255,245,236,0.78), rgba(255,245,236,0.85)),
-url('https://images.unsplash.com/photo-1468327768560-75b778cbb551?q=80&w=1600&auto=format&fit=crop');
+linear-gradient(rgba(255,241,236,0.84),rgba(255,241,236,0.88)),
+url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=1600&auto=format&fit=crop');
 
 background-size:cover;
 background-position:center;
 
 text-align:center;
-
-position:relative;
-overflow:hidden;
-}
-
-.quote-section::before{
-content:'❀';
-
-position:absolute;
-
-left:100px;
-top:70px;
-
-font-size:8rem;
-
-color:rgba(217,93,135,0.08);
 }
 
 .quote{
-font-family:'Cormorant Garamond', serif;
-
-font-size:4.5rem;
-line-height:1.2;
-
-max-width:950px;
+font-family:'Cormorant Garamond',serif;
+font-size:3.5rem;
+line-height:1.3;
+max-width:900px;
 margin:auto;
-
-color:#3b2f2b;
+color:#3a2f2b;
 }
 
 /* CONTACT */
 
 .contact{
-
-padding:140px 8%;
-
+padding:120px 7%;
 text-align:center;
 
 background:
-linear-gradient(to bottom,#f8eef6,#f5e8df);
-
-position:relative;
-overflow:hidden;
-}
-
-.contact::before{
-content:'';
-
-position:absolute;
-
-width:450px;
-height:450px;
-
-background:
-radial-gradient(circle,#ffd9ef 0%, transparent 70%);
-
-left:-180px;
-bottom:-180px;
-
-opacity:0.6;
+linear-gradient(to bottom,#fff4ef,#fdeef4);
 }
 
 .contact h2{
-font-family:'Cormorant Garamond', serif;
-
-font-size:4.5rem;
-
-margin-bottom:28px;
-
-color:#ca557e;
-
-position:relative;
-z-index:2;
+font-family:'Cormorant Garamond',serif;
+font-size:3.8rem;
+margin-bottom:20px;
+color:#d15d86;
 }
 
 .contact p{
-line-height:2.1;
-
-color:#5f5652;
-
-margin-bottom:35px;
-
-position:relative;
-z-index:2;
+line-height:2;
+max-width:700px;
+margin:auto auto 30px;
+color:#5f5551;
 }
 
-/* FOOTER */
-
 footer{
-padding:45px;
-
+padding:35px;
 text-align:center;
-
-background:#eadfd5;
-
-color:#6d605b;
-
-font-size:0.92rem;
+background:#f3e4de;
+color:#6d615d;
+font-size:0.9rem;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
+.hero{
+grid-template-columns:1fr;
+}
+
 .hero h1{
-font-size:4.5rem;
+font-size:3.7rem;
+}
+
+.tall{
+height:360px !important;
 }
 
 .section-title{
-font-size:3.3rem;
+font-size:3rem;
 }
 
 .quote{
-font-size:3rem;
+font-size:2.5rem;
 }
 
 }
@@ -495,7 +362,7 @@ font-size:3rem;
 
 nav{
 flex-direction:column;
-gap:18px;
+gap:15px;
 }
 
 nav ul{
@@ -504,117 +371,111 @@ justify-content:center;
 }
 
 .hero h1{
-font-size:3.2rem;
+font-size:3rem;
+}
+
+.hero-images{
+grid-template-columns:1fr;
+}
+
+.hero-images img{
+height:300px;
 }
 
 .section-title{
-font-size:2.7rem;
+font-size:2.5rem;
 }
 
 .quote{
-font-size:2.2rem;
-}
-
-.hero::before{
-width:280px;
-height:280px;
-right:-100px;
+font-size:2rem;
 }
 
 }
+
 </style>
-
 </head>
 
 <body>
 
 <nav>
-
-<div class="logo">
-Rainbow Rose Connect
-</div>
+<div class="logo">Rainbow Rose Connect</div>
 
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Community</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
-
 </nav>
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-text">
 
-<div class="small-text">
-Community • Inclusion • Belonging
+<div class="small">
+COMMUNITY • INCLUSION • BELONGING
 </div>
 
 <h1>
-We create <span class="highlight">connection</span>, confidence, and genuine belonging.
+We create
+<span>connection</span>,
+confidence,
+and genuine
+belonging.
 </h1>
 
 <p>
-Rainbow Rose Connect is an NDIS support service focused on social inclusion,
-capacity building, wellbeing, and meaningful community connection.
-We create personalized, nature-based, and relationship-led experiences
-that support growth, creativity, confidence, and emotional wellbeing.
+Rainbow Rose Connect is an NDIS support service focused on social inclusion, capacity building, wellbeing, and meaningful community connection. We create personalized, nature based, and relationship led experiences that support confidence, joy, and authentic belonging.
 </p>
 
-<a href="#contact" class="button">
-Get In Touch
+<a href="#" class="button">
+Connect With Us
 </a>
 
 </div>
 
+<div class="hero-images">
+
+<img class="tall" src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
 </section>
 
-<section class="section" id="about">
+<section class="section">
 
 <h2 class="section-title">
-A softer approach to support.
+A softer way to support.
 </h2>
 
 <p class="section-text">
-
-We believe support should feel warm, empowering, human, and deeply connected.
-Our approach centers around nature, creativity, inclusion, emotional safety,
-and meaningful relationships.
-
-We create supportive spaces where individuals feel seen, celebrated,
-encouraged, and connected to community.
-
+We believe support should feel human, warm, empowering, and deeply connected. Rainbow Rose Connect focuses on helping individuals build confidence, social connection, independence, creativity, and meaningful participation in everyday life through compassionate and personalized experiences.
 </p>
-
-</section>
-
-<section class="section" id="services">
-
-<h2 class="section-title">
-What We Offer
-</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Social Inclusion</h3>
+<h3>Community</h3>
 <p>
-Creating opportunities for connection, participation, friendship, and joyful shared experiences.
+Gentle social connection, shared experiences, and meaningful relationships that create a true sense of belonging.
 </p>
 </div>
 
 <div class="card">
-<h3>Capacity Building</h3>
+<h3>Nature</h3>
 <p>
-Supporting confidence, independence, communication, creativity, and everyday life skills.
+Nature based experiences that encourage wellbeing, calmness, grounding, creativity, and emotional growth.
 </p>
 </div>
 
 <div class="card">
-<h3>Nature Based Wellbeing</h3>
+<h3>Capacity</h3>
 <p>
-Grounding experiences in nature that nurture calm, confidence, creativity, and emotional wellbeing.
+Support that nurtures confidence, independence, communication, life skills, and authentic self expression.
 </p>
 </div>
 
@@ -622,19 +483,19 @@ Grounding experiences in nature that nurture calm, confidence, creativity, and e
 
 </section>
 
-<section class="section" id="gallery">
+<section class="section">
 
 <h2 class="section-title">
-Our Community
+Moments of connection.
 </h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop">
 
-<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?q=80&w=1200&auto=format&fit=crop">
 
-<img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop">
 
 </div>
 
@@ -643,38 +504,27 @@ Our Community
 <section class="quote-section">
 
 <div class="quote">
-“Everyone deserves to feel connected, included, supported, and valued.”
+“Everyone deserves spaces where they feel seen, valued, supported, and genuinely included.”
 </div>
 
 </section>
 
-<section class="contact" id="contact">
+<section class="contact">
 
-<h2>
-Contact Us
-</h2>
+<h2>Let’s grow community together.</h2>
 
 <p>
-
-Rainbow Rose Connect <br><br>
-
-NDIS Support Services focused on inclusion, wellbeing, and meaningful connection. <br><br>
-
-Email: hello@rainbowroseconnect.com <br>
-Instagram: @rainbowroseconnect
-
+We would love to connect and create supportive, inclusive, and meaningful experiences together.
 </p>
 
 <a href="#" class="button">
-Send Inquiry
+Contact Us
 </a>
 
 </section>
 
 <footer>
-
 Rainbow Rose Connect © 2026
-
 </footer>
 
 </body>

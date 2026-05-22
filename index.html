@@ -1,489 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+export default function RainbowRoseConnect() {
+  return (
+    <div className="min-h-screen bg-[#f7ece6] text-[#3d2846] flex font-serif">
+      {/* Sidebar */}
+      <aside className="w-72 bg-gradient-to-b from-[#4c2747] to-[#2f1832] text-white flex flex-col justify-between p-8 relative overflow-hidden">
+        <div>
+          <div className="mb-12">
+            <h1 className="text-4xl leading-tight font-semibold tracking-wide">
+              Rainbow Rose
+            </h1>
+            <p className="uppercase tracking-[0.4em] text-[#d9b36c] text-sm mt-2">
+              Connect
+            </p>
+          </div>
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <nav className="space-y-5 text-lg">
+            <a className="block hover:text-[#f3d5de] transition">Home</a>
+            <a className="block hover:text-[#f3d5de] transition">Our Care</a>
+            <a className="block hover:text-[#f3d5de] transition">Services</a>
+            <a className="block hover:text-[#f3d5de] transition">Community</a>
+            <a className="block hover:text-[#f3d5de] transition">About Us</a>
+            <a className="block hover:text-[#f3d5de] transition">Contact</a>
+          </nav>
 
-<title>Rainbow Rose Connect</title>
+          <div className="mt-16">
+            <p className="text-[#f3d5de] text-sm leading-relaxed">
+              Let’s grow connections together ♡
+            </p>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <button className="mt-6 bg-[#d8a867] hover:bg-[#c69454] transition text-white px-6 py-3 rounded-full shadow-lg text-sm tracking-wide uppercase">
+              Get In Touch
+            </button>
+          </div>
+        </div>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <div className="absolute bottom-0 left-0 right-0 opacity-30">
+          <img
+            src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?q=80&w=1200&auto=format&fit=crop"
+            alt="rose"
+            className="w-full h-64 object-cover"
+          />
+        </div>
+      </aside>
 
-<style>
+      {/* Main Content */}
+      <main className="flex-1 p-10 lg:p-16 overflow-y-auto">
+        {/* Top bar */}
+        <div className="flex justify-between items-center mb-10">
+          <h2 className="text-2xl font-medium">Rainbow Rose Connect</h2>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+          <div className="flex gap-5 text-2xl">
+            <span>⌕</span>
+            <span>◌</span>
+            <span>☺</span>
+          </div>
+        </div>
+
+        {/* Hero */}
+        <section className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-6xl leading-tight font-semibold tracking-tight text-[#41214b]">
+              <span className="text-[#c55f7d]">MORE THAN SUPPORT,</span>
+              <br />
+              REAL COMPANIONSHIP.
+            </h1>
+
+            <div className="w-16 h-[2px] bg-[#cda678] my-8"></div>
+
+            <p className="text-xl leading-relaxed text-[#4b3b4f] max-w-xl">
+              At Rainbow Rose Connect, we create supportive experiences where people can feel comfortable being themselves and supported every step of the way.
+            </p>
+
+            <div className="flex items-center gap-6 mt-10">
+              <button className="bg-gradient-to-r from-[#7b375c] to-[#d86f8d] text-white px-8 py-4 rounded-full shadow-xl hover:scale-105 transition duration-300">
+                Begin Your Journey
+              </button>
+
+              <button className="flex items-center gap-3 text-[#7b375c] hover:opacity-80 transition">
+                <span className="w-12 h-12 rounded-full border border-[#c98ca3] flex items-center justify-center">
+                  ▶
+                </span>
+                Watch Our Story
+              </button>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="rounded-[3rem] overflow-hidden shadow-2xl border border-[#f1d8d1]">
+              <img
+                src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop"
+                alt="community"
+                className="w-full h-[540px] object-cover"
+              />
+            </div>
+
+            <div className="absolute -right-6 -bottom-6 bg-[#fff7f3] p-8 rounded-[2rem] shadow-xl max-w-xs border border-[#f0d9d0]">
+              <h3 className="text-3xl text-[#4b2f55] leading-tight">
+                Community
+                <br />
+                Connection
+              </h3>
+
+              <p className="mt-4 text-[#5b4a5f] leading-relaxed">
+                Creating warm, supportive experiences where people feel valued and connected.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Growing Together */}
+        <section className="mt-24 grid lg:grid-cols-[1fr_1fr_1fr_1fr] gap-6 items-start">
+          <div>
+            <h2 className="text-6xl italic text-[#cc6f89] leading-none">
+              Growing
+            </h2>
+            <h3 className="text-5xl leading-tight text-[#3c2244]">
+              Together
+            </h3>
+          </div>
+
+          <div className="space-y-4">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop"
+              alt="group"
+              className="rounded-[2rem] h-72 w-full object-cover shadow-lg"
+            />
+            <p className="text-center text-xl text-[#4a3153]">
+              Shared Moments
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <img
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop"
+              alt="confidence"
+              className="rounded-[2rem] h-72 w-full object-cover shadow-lg"
+            />
+            <p className="text-center text-xl text-[#4a3153]">
+              Building Confidence
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <img
+              src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop"
+              alt="community"
+              className="rounded-[2rem] h-72 w-full object-cover shadow-lg"
+            />
+            <p className="text-center text-xl text-[#4a3153]">
+              Community Connection
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
-
-body{
-background:#f8ebe5;
-font-family:'Montserrat',sans-serif;
-color:#3d2645;
-overflow-x:hidden;
-}
-
-/* CONTAINER */
-
-.container{
-display:flex;
-min-height:100vh;
-width:100%;
-}
-
-/* SIDEBAR */
-
-.sidebar{
-width:270px;
-background:linear-gradient(to bottom,#512c4b,#2d1831);
-padding:40px 30px;
-color:white;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-position:relative;
-overflow:hidden;
-}
-
-.logo h1{
-font-family:'Cormorant Garamond',serif;
-font-size:58px;
-line-height:0.9;
-font-weight:600;
-}
-
-.logo p{
-letter-spacing:8px;
-font-size:12px;
-margin-top:12px;
-color:#d7b16d;
-text-transform:uppercase;
-}
-
-.nav{
-margin-top:60px;
-}
-
-.nav a{
-display:block;
-text-decoration:none;
-color:white;
-margin-bottom:22px;
-padding:16px 22px;
-border-radius:40px;
-font-size:18px;
-transition:0.3s;
-}
-
-.nav a.active{
-background:#6b4763;
-color:#f1d27f;
-}
-
-.sidebar-text{
-margin-top:45px;
-line-height:1.7;
-font-size:15px;
-color:#f2dce4;
-}
-
-.button{
-display:inline-block;
-margin-top:25px;
-background:#d8a768;
-padding:16px 28px;
-border-radius:14px;
-color:white;
-text-decoration:none;
-font-weight:600;
-}
-
-.socials{
-display:flex;
-gap:18px;
-margin-top:30px;
-font-size:24px;
-}
-
-.rose{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-opacity:0.25;
-}
-
-/* MAIN */
-
-.main{
-flex:1;
-padding:50px 70px;
-}
-
-/* TOPBAR */
-
-.topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:50px;
-}
-
-.topbar h2{
-font-family:'Cormorant Garamond',serif;
-font-size:44px;
-font-weight:600;
-}
-
-.icons{
-display:flex;
-gap:22px;
-font-size:28px;
-}
-
-/* HERO */
-
-.hero{
-display:grid;
-grid-template-columns:1.1fr 0.9fr;
-gap:70px;
-align-items:center;
-}
-
-.hero-title{
-font-family:'Cormorant Garamond',serif;
-font-size:92px;
-line-height:0.92;
-font-weight:600;
-margin-bottom:35px;
-}
-
-.hero-title span{
-color:#c56b85;
-}
-
-.hero-text{
-font-size:25px;
-line-height:1.7;
-max-width:640px;
-color:#4b3b4f;
-}
-
-.actions{
-display:flex;
-align-items:center;
-gap:35px;
-margin-top:50px;
-}
-
-.main-btn{
-background:linear-gradient(to right,#7b3959,#d86f8e);
-color:white;
-padding:22px 38px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-font-size:17px;
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
-}
-
-.watch{
-display:flex;
-align-items:center;
-gap:15px;
-font-size:17px;
-}
-
-.play{
-width:58px;
-height:58px;
-border:1px solid #d7a6b6;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-/* HERO IMAGE */
-
-.hero-image img{
-width:100%;
-height:700px;
-object-fit:cover;
-border-radius:42px;
-box-shadow:0 20px 50px rgba(0,0,0,0.12);
-}
-
-/* GROWING */
-
-.growing{
-display:grid;
-grid-template-columns:1fr 1fr 1fr 1fr;
-gap:30px;
-margin-top:80px;
-align-items:start;
-}
-
-.grow-title .small{
-font-family:'Cormorant Garamond',serif;
-font-size:72px;
-font-style:italic;
-line-height:0.8;
-color:#cf708c;
-}
-
-.grow-title .big{
-font-family:'Cormorant Garamond',serif;
-font-size:68px;
-line-height:0.9;
-}
-
-.card img{
-width:100%;
-height:290px;
-object-fit:cover;
-border-radius:32px;
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
-}
-
-.card h3{
-text-align:center;
-margin-top:18px;
-font-family:'Cormorant Garamond',serif;
-font-size:30px;
-font-weight:600;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1200px){
-
-.hero{
-grid-template-columns:1fr;
-}
-
-.growing{
-grid-template-columns:1fr 1fr;
-}
-
-.hero-title{
-font-size:72px;
-}
-
-.hero-image img{
-height:520px;
-}
-
-}
-
-@media(max-width:768px){
-
-.container{
-flex-direction:column;
-}
-
-.sidebar{
-width:100%;
-}
-
-.main{
-padding:30px;
-}
-
-.hero{
-grid-template-columns:1fr;
-}
-
-.hero-title{
-font-size:54px;
-}
-
-.hero-text{
-font-size:20px;
-}
-
-.growing{
-grid-template-columns:1fr;
-}
-
-.topbar{
-flex-direction:column;
-align-items:flex-start;
-gap:20px;
-}
-
-.actions{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.hero-image img{
-height:420px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<!-- SIDEBAR -->
-
-<div class="sidebar">
-
-<div>
-
-<div class="logo">
-<h1>Rainbow Rose</h1>
-<p>CONNECT</p>
-</div>
-
-<div class="nav">
-<a href="#" class="active">HOME</a>
-<a href="#">OUR CARE</a>
-<a href="#">SERVICES</a>
-<a href="#">COMMUNITY</a>
-<a href="#">ABOUT US</a>
-<a href="#">CONTACT</a>
-</div>
-
-<div class="sidebar-text">
-Let’s grow connections together ♡
-</div>
-
-<a href="#" class="button">
-GET IN TOUCH
-</a>
-
-<div class="socials">
-<span>f</span>
-<span>◎</span>
-<span>◌</span>
-</div>
-
-</div>
-
-<img class="rose" src="community.jpg">
-
-</div>
-
-<!-- MAIN -->
-
-<div class="main">
-
-<!-- TOPBAR -->
-
-<div class="topbar">
-
-<h2>Rainbow Rose Connect</h2>
-
-<div class="icons">
-<span>⌕</span>
-<span>◌</span>
-<span>☺</span>
-</div>
-
-</div>
-
-<!-- HERO -->
-
-<div class="hero">
-
-<div>
-
-<h1 class="hero-title">
-<span>MORE THAN SUPPORT,</span>
-<br>
-REAL COMPANIONSHIP.
-</h1>
-
-<p class="hero-text">
-At Rainbow Rose Connect, we create supportive experiences where people can feel comfortable being themselves and supported every step of the way.
-</p>
-
-<div class="actions">
-
-<a href="#" class="main-btn">
-BEGIN YOUR JOURNEY →
-</a>
-
-<div class="watch">
-
-<div class="play">
-▶
-</div>
-
-<div>
-WATCH
-<br>
-OUR STORY
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- HERO IMAGE -->
-
-<div class="hero-image">
-
-<img src="paint.jpg">
-
-</div>
-
-</div>
-
-<!-- GROWING -->
-
-<div class="growing">
-
-<div class="grow-title">
-
-<div class="small">
-Growing
-</div>
-
-<div class="big">
-Together
-</div>
-
-</div>
-
-<!-- COMMUNITY -->
-
-<div class="card">
-<img src="community.jpg">
-<h3>Shared Moments</h3>
-</div>
-
-<!-- CLIMB -->
-
-<div class="card">
-<img src="climb.jpg">
-<h3>Building Confidence</h3>
-</div>
-
-<!-- WHEELCHAIR -->
-
-<div class="card">
-<img src="wheelchair.jpg">
-<h3>Community Connection</h3>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</body>
-</html>
